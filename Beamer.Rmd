@@ -1,0 +1,31 @@
+---
+title: "Bochum_Best_City"
+author: "TFH"
+date: "15.4.2020"
+output:
+  slidy_presentation: default
+  beamer_presentation: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Bochum
+
+
+Bochum is a big city in the Ruhr area
+
+
+In Bochum, the VFL Bochum plays in the second federal league
+
+## Plot
+
+```{r plot, echo = FALSE,message=FALSE}
+Age <- c("under 3 years", "3_to_6","6_to_10", "10_to_14" )
+count <- c(9693,9507,11682,11593)
+Bochumer <- data.frame(Age, count)
+library(plotly)
+set.seed(4630)
+plot_ly(data = Bochumer, x = Age, y = count, type = "bar")
+```
